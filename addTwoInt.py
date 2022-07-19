@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+!/usr/bin/env python3
 
 def add(a, b):
   x = a+b
@@ -6,7 +6,9 @@ def add(a, b):
 
 import sys
 print (sys.argv)
-a = float(sys.argv[1])
-b = float(sys.argv[2])
-print ("The sum is:", add(a,b))
-
+if len(sys.argv) == 3:
+  a = float(sys.argv[1])
+  b = float(sys.argv[2])
+  print ("The sum is:", add(a,b))
+else:
+  print ("Invalid number of arguments entered!")
